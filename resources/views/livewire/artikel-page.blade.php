@@ -35,6 +35,7 @@
                                 <ul tabindex="0" class="p-2 shadow-sm dropdown-content menu bg-base-100 rounded-box z-1 w-52">
                                     <li><a href="/artikel/{{ $item->slug }}/detail" wire:navigate>Detail</a></li>
                                     <li><a href="/artikel/{{ $item->slug }}/edit" wire:navigate>Edit</a></li>
+                                    <li>@livewire('artikel-delete', ['id' => $item->id])</li>
                                 </ul>
                             </div>
                         </td>

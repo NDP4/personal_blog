@@ -4,11 +4,10 @@ use App\Livewire\ArtikelCreate;
 use App\Livewire\ArtikelDetail;
 use App\Livewire\ArtikelEdit;
 use App\Livewire\ArtikelPage;
+use App\Livewire\HomePage;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomePage::class);
 
 Route::middleware([
     'auth:sanctum',
