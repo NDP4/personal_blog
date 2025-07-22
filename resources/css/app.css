@@ -14,3 +14,9 @@
 [x-cloak] {
     display: none;
 }
+
+@layer components {
+    .tittle {
+        @apply text-3xl font-semibold;
+    }
+}

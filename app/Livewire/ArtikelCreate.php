@@ -16,7 +16,7 @@ class ArtikelCreate extends Component
      */
     use WithFileUploads;
 
-    public $kategori, $judul, $konten, $kategori_id, $gambar_artikel, $status;
+    public $kategori, $judul, $konten, $kategori_id, $gambar_artikel, $status, $is_trending;
 
     public function mount()
     {

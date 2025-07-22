@@ -15,7 +15,7 @@
                         @if($artikel->gambar_artikel)
                             <div class="mt-2">
                                 <p>Gambar saat ini:</p>
-                                <img src="{{ asset('storage/artikel/' . $artikel->gambar_artikel) }}" alt="Gambar artikel" class="mt-2 w-48">
+                                <img src="{{ asset('storage/artikel/' . $artikel->gambar_artikel) }}" alt="Gambar artikel" class="w-48 mt-2">
                             </div>
                         @endif
                     </div>
@@ -51,6 +51,13 @@
                         <label for="konten" class="label">Konten</label>
                         <textarea class="w-full textarea" cols="30" rows="10" wire:model="konten"></textarea>
                         @error('konten')
+                            <span class="text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="gap-y-1 {{ $artikel->status == 'draft' ? 'hidden' : 'flex' }}">
+                        <label for="is_trending" class="label">Is Trending</label>
+                        <input type="checkbox" class="toggle toggle-primary" wire:model="is_trending" />
+                        @error('is_trending')
                             <span class="text-red-500">{{ $message }}</span>
                         @enderror
                     </div>

@@ -12,7 +12,7 @@ use Livewire\WithFileUploads;
 class ArtikelEdit extends Component
 {
     use WithFileUploads;
-    public $kategori, $artikel, $judul, $konten, $kategori_id, $gambar_artikel, $status;
+    public $kategori, $artikel, $judul, $konten, $kategori_id, $gambar_artikel, $status, $is_trending;
     public $oldImage;
 
     public function mount($slug)
@@ -24,6 +24,7 @@ class ArtikelEdit extends Component
         $this->kategori_id = $this->artikel->kategori_id;
         // Tidak set $this->gambar_artikel karena itu akan diisi oleh input file
         $this->status = $this->artikel->status;
+        $this->is_trending = $this->artikel->is_trending;
     }
     public function rules()
     {
@@ -84,6 +85,7 @@ class ArtikelEdit extends Component
         $artikel->kategori_id = $this->kategori_id;
         $artikel->gambar_artikel = $fileName;
         $artikel->status = $this->status;
+        $artikel->is_trending = $this->is_trending;
 
         // Jika status berubah menjadi published, update tanggal publish
         if ($artikel->status == 'published' && $this->artikel->status != 'published') {
