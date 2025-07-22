@@ -13,10 +13,14 @@ export default {
     ],
 
     theme: {
+        container: {
+            center: true,
+            padding: '2rem',
+        },
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                poppins: ['Poppins', "sans-serif"],
+                poppins: ['Poppins', ...defaultTheme.fontFamily.serif],
             },
         },
     },

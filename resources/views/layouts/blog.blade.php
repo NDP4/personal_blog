@@ -23,7 +23,7 @@
 
         @livewire('blog-nav-bar')
 
-        <main>
+        <main class="py-10">
             {{ $slot }}
         </main>
 

@@ -32,7 +32,6 @@ class ArtikelCreate extends Component
     {
         return [
             'judul' => 'required',
-            'slug' => 'required|unique:artikels,slug',
             'konten' => 'required',
             'kategori_id' => 'required|exists:kategoris,id',
             'gambar_artikel' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Optional image validation
@@ -43,8 +42,6 @@ class ArtikelCreate extends Component
     {
         return [
             'judul.required' => 'Judul artikel harus diisi.',
-            'slug.required' => 'Slug artikel harus diisi.',
-            'slug.unique' => 'Slug artikel sudah digunakan.',
             'konten.required' => 'Konten artikel harus diisi.',
             'kategori_id.required' => 'Kategori artikel harus dipilih.',
             'kategori_id.exists' => 'Kategori yang dipilih tidak valid.',

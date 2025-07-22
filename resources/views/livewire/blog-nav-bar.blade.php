@@ -1,4 +1,4 @@
-<div class=" px-36 navbar bg-base-scale-100">
+<div class="px-52 navbar bg-base-scale-100">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
